@@ -15,7 +15,7 @@ public class calcMain {
 			return String.valueOf(resNum);		
 		}
 		else {
-			String[] numberSplit = numbers.split("[\\\\n,]");  
+			String[] numberSplit = numbers.split("[//\\\\n,!.?:;@#$%^&*()_+=?'<>+]");	
 			
 			List<String> numList = new ArrayList<String>();
 			
