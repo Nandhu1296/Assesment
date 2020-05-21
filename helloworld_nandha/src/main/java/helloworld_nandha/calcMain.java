@@ -2,14 +2,11 @@ package helloworld_nandha;
 
 public class calcMain {
 	
-	public String play(int number)
+	public String play(String c1, String c2)
 	{
-		int e = 2900+number;
-		if(number == 3)
-		{
-			return String.valueOf(number);
-		}
-		return String.valueOf(e);
+		int n1=Integer.parseInt(c1);
+		int n2=Integer.parseInt(c2);
+		int resNum=n1+n2;
+		return String.valueOf(resNum);
 	}
-
 }
