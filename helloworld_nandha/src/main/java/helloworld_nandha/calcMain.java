@@ -13,6 +13,22 @@ public class calcMain {
 		if(numbers.contains(" ") || numbers.isEmpty())
 		{
 			return String.valueOf(resNum);		
+		}else if (numbers.contains("-")) {
+			
+			char[] chars = numbers.toCharArray();
+		      
+		      for(char c : chars){
+		    	  
+		    	  if(String.valueOf(c).matches("-") && (numbers.charAt(numbers.indexOf(c)+1)>0)) 
+		    	  {
+			        	System.out.println("Negatives not allowed ");
+			        	System.out.println("number is"+String.valueOf(c)+numbers.charAt(numbers.indexOf(c)+1));
+
+		    	  }
+		      }
+			
+			return String.valueOf(resNum);		
+
 		}
 		else {
 			String[] numberSplit = numbers.split("[//\\\\n,!.?:;@#$%^&*()_+=?'<>+]");	

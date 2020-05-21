@@ -14,7 +14,7 @@ public class calcTest {
 	{
 		calcMain calcMainObj= new calcMain();
 		sc = new Scanner(System.in);
-		System.out.println("Enter the two numbers seperated by comma's \n");
+		System.out.println("Enter the input \n");
 		Object numbers= sc.nextLine();
 		
 		String numberReturned= calcMainObj.play(numbers);
