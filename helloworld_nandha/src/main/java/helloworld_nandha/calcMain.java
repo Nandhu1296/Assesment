@@ -31,13 +31,12 @@ public class calcMain {
 
 		}
 		else {
-			String[] numberSplit = numbers.split("[//\\\\n,!.?:;@#$%^&*()_+=?'<>+]");	
-			
+			String Delimeters="[//\\\\\\\\n,!.?:;@#$%^&*()_+=?'<>+\n]";
+			String[] numberSplit = numbers.split(Delimeters);	
 			List<String> numList = new ArrayList<String>();
 			
 			for (int i = 0; i < numberSplit.length; i++) 
 			{
-				
 				String str= numberSplit[i];
 				if (null != str && !str.equals(""))
 				{
