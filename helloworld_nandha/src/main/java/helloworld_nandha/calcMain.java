@@ -46,7 +46,15 @@ public class calcMain {
 			}
 			for(String s : numList)
 			{
-			    resNum=resNum+Integer.parseInt(s);
+				if(Integer.parseInt(s) >= 1000) {
+					int modulo=Integer.parseInt(s);
+					modulo=modulo%1000;
+					resNum=resNum+modulo;
+
+				}else {
+					resNum=resNum+Integer.parseInt(s);
+				}
+			    
 			}
 			return String.valueOf(resNum);
 		}
