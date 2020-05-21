@@ -1,6 +1,7 @@
 package helloworld_nandha;
 
-import java.util.Scanner;
+
+import java.util.*;
 
 import org.junit.*;
 
@@ -14,10 +15,10 @@ public class calcTest {
 		calcMain calcMainObj= new calcMain();
 		sc = new Scanner(System.in);
 		System.out.println("Enter the two numbers seperated by comma's \n");
-		String numbers= sc.nextLine();
+		Object numbers= sc.nextLine();
 		
 		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("The result is \n"+ numberReturned);
+		System.out.println("Result is \n"+ numberReturned);
 		
 	}
 	
