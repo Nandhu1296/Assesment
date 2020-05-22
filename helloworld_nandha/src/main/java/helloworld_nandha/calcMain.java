@@ -25,9 +25,7 @@ public class calcMain {
 
 		    	  }
 		      }
-			
 			return String.valueOf(resNum);		
-
 		}
 		else {
 			String Delimeters="[//\\\\\\\\n,!.?:;@#$%^&*()_+=?'<>+\n]";

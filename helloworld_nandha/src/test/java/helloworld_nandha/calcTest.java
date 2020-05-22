@@ -78,10 +78,17 @@ public class calcTest {
 	}
 	
 	@Test
-	public void multipledelimiters()
+	public void multipleDelimiters()
 	{
 		String st="//*%9\n*9%9#";
 		Assert.assertEquals("27", calcMainObj.calculate(st));
+	}
+	
+	@Test
+	public void multipleDelimitersWithSpaces()
+	{
+		String st="//*% 9\n*9%9#";
+		Assert.assertEquals("0", calcMainObj.calculate(st));
 	}
 
 }
