@@ -1,13 +1,10 @@
 package helloworld_nandha;
 
 
-import java.util.*;
-
 import org.junit.*;
 
 public class calcTest {
 
-	private Scanner sc;
 	private  calcMain calcMainObj;
 	
 	@Before
@@ -20,115 +17,71 @@ public class calcTest {
 	@Test
 	public void twoNumbersWithComma()
 	{
-		String st="2,2";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="98,8";
+		Assert.assertEquals("106", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void singlenumber()
 	{
-		String st="2";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="74";
+		Assert.assertEquals("74", calcMainObj.calculate(st));	
 	}
 	
 	@Test
 	public void noValue()
 	{
 		String st="";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		Assert.assertEquals("0", calcMainObj.calculate(st));	
 	}
 	
 	@Test
 	public void unknownAmountOfNumbers()
 	{
-		String st="2,3,5";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="322,4,56,";
+		Assert.assertEquals("382", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void withSlashN()
 	{
-		String st="1\n2,3";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="\n8,4\n9";
+		Assert.assertEquals("21", calcMainObj.calculate(st));		
 	}
 	
 	@Test
 	public void withDifferentDelimiters()
 	{
-		String st="//;\\n1;2";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="#;//(5)6_\\n;*=6";
+		Assert.assertEquals("17", calcMainObj.calculate(st));	
 	}
 	
 	@Test
 	public void withNegativeNumbers()
 	{
-		String st="6,8-9";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="(6#-8\n9";
+		Assert.assertEquals("0", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void numberBiggerThan1000()
 	{
-		String st="2+1001";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="1009,#56";
+		Assert.assertEquals("65", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void delimitersOfAnyLength()
 	{
-		String st="//[***]\\n1***2***3";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="4#####6/7=+78////*2**\\n******3";
+		Assert.assertEquals("100", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void multipledelimiters()
 	{
-		String st="//[*][%]\\n1*2%3";
-		Object numbers= (Object)st;
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
+		String st="//*%9\n*9%9#";
+		Assert.assertEquals("27", calcMainObj.calculate(st));
 	}
 
-	
-	@Test
-	public void forUserInput()
-	{
-		sc = new Scanner(System.in);
-		System.out.println("Enter the input \n");
-		Object numbers= sc.nextLine();
-		String numberReturned= calcMainObj.play(numbers);
-		System.out.println("Result is \n"+ numberReturned);
-		
-	}
-	
-	
-	
 }

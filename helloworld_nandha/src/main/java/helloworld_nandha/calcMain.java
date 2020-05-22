@@ -6,9 +6,8 @@ import java.util.*;
 
 public class calcMain {
 	
-	public String play(Object numbersObj)
+	public String calculate(String numbers)
 	{
-		String numbers=numbersObj.toString();
 		int resNum=0;
 		if(numbers.contains(" ") || numbers.isEmpty())
 		{
