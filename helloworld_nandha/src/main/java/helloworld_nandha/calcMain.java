@@ -28,7 +28,7 @@ public class calcMain {
 			return String.valueOf(resNum);		
 		}
 		else {
-			String Delimeters="[//\\\\\\\\n,!.?:;@#$%^&*()_+=?'<>+\n]";
+			String Delimeters="[//\\\\\\\\n,!.?:;@#$%^&*(\\])_\\[+=?'<>+\n]";
 			String[] numberSplit = numbers.split(Delimeters);	
 			List<String> numList = new ArrayList<String>();
 			

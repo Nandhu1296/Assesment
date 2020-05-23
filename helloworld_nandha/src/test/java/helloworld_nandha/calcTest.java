@@ -73,14 +73,14 @@ public class calcTest {
 	@Test
 	public void delimitersOfAnyLength()
 	{
-		String st="4#####6/7=+78////*2**\\n******3";
-		Assert.assertEquals("100", calcMainObj.calculate(st));
+		String st="//[***]\\n34***57***7";
+		Assert.assertEquals("98", calcMainObj.calculate(st));
 	}
 	
 	@Test
 	public void multipleDelimiters()
 	{
-		String st="//*%9\n*9%9#";
+		String st="//[*][%]\\n9*9%9";  
 		Assert.assertEquals("27", calcMainObj.calculate(st));
 	}
 	
